@@ -371,23 +371,23 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate,UICollectionV
             timeObject.setObject(timeForImage, forKey: "time")
             NSLog("Split times are \(CMTimeGetSeconds(cmTimeForImage))")
             let imageRef: CGImage!
-//            do {
-            imageRef = imageGenerator.copyCGImageAtTime(cmTimeForImage, actualTime: nil,error: nil)
-//            } catch _ {
-//                imageRef = nil
-//            }
+            do {
+            imageRef = try imageGenerator.copyCGImageAtTime(cmTimeForImage, actualTime: nil)
+            } catch _ {
+                imageRef = nil
+            }
             let scale = UIScreen.mainScreen().scale
             let image = UIImage(CGImage: imageRef)
-            timeObject.setObject(image!, forKey: "imageFull")
+            timeObject.setObject(image, forKey: "imageFull")
             let newSize = CGSizeMake(self.view.frame.width, self.view.frame.height)
             UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-            image!.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
+            image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
             let resizedImage = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             let resizeRect = CGRectMake(resizedImage.size.width/3 * scale , 0, resizedImage.size.width/3 * scale, resizedImage.size.height * scale)
             let croppedCGImage = CGImageCreateWithImageInRect(resizedImage.CGImage, resizeRect)
-            let croppedImage = UIImage(CGImage: croppedCGImage)
-            timeObject.setObject(croppedImage!, forKey: "image")
+            let croppedImage = UIImage(CGImage: croppedCGImage!)
+            timeObject.setObject(croppedImage, forKey: "image")
             times.addObject(timeObject)
         }
         return times
