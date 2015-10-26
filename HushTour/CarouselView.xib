@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselView" customModule="VideoScrubber" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="VZi-QJ-bHn" id="seD-rF-rJa"/>
+                <outlet property="titleLabel" destination="ucG-wV-Cg9" id="Mua-FT-4Jd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="118"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen.png" translatesAutoresizingMaskIntoConstraints="NO" id="VZi-QJ-bHn">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="118"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6V-4z-W0C">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="118"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucG-wV-Cg9">
+                            <rect key="frame" x="15" y="83" width="83" height="24"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ucG-wV-Cg9" firstAttribute="leading" secondItem="g6V-4z-W0C" secondAttribute="leading" constant="15" id="MaY-EJ-Vq8"/>
+                        <constraint firstAttribute="bottom" secondItem="ucG-wV-Cg9" secondAttribute="bottom" constant="11" id="Y1X-FG-o2B"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="g6V-4z-W0C" secondAttribute="bottom" id="02P-CX-3Ry"/>
+                <constraint firstAttribute="trailing" secondItem="g6V-4z-W0C" secondAttribute="trailing" id="0tF-XA-fgN"/>
+                <constraint firstItem="VZi-QJ-bHn" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="5a3-61-FuC"/>
+                <constraint firstItem="VZi-QJ-bHn" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CCl-Jj-y1A"/>
+                <constraint firstItem="g6V-4z-W0C" firstAttribute="width" secondItem="VZi-QJ-bHn" secondAttribute="width" id="EUM-0n-iHn"/>
+                <constraint firstItem="g6V-4z-W0C" firstAttribute="height" secondItem="VZi-QJ-bHn" secondAttribute="height" id="OwA-iR-3c8"/>
+                <constraint firstItem="VZi-QJ-bHn" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="SLj-vs-atN"/>
+                <constraint firstItem="g6V-4z-W0C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TBX-zh-Kwm"/>
+                <constraint firstItem="VZi-QJ-bHn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cF8-sv-ZBL"/>
+                <constraint firstItem="g6V-4z-W0C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sDp-ew-vgu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="251" y="152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kitchen.png" width="1280" height="720"/>
+    </resources>
+</document>
