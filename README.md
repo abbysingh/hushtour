@@ -6,4 +6,6 @@ At housing.com, we did an experiment on what would be a good experience of touri
 Swipe from the right to see cards corresponding to every room.
 Tap to see a view comprising of the house layout with every room on the right
 
+Read more about it here - https://medium.com/@vibes/hush-7d4dc3342304
+
 Clone the repo and hit run!
